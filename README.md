@@ -5,11 +5,28 @@
 ![Quantum Lab](https://img.shields.io/badge/Quantum-Research%20Lab-cyan?style=flat-square)
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square)
 ![Qiskit](https://img.shields.io/badge/Qiskit-2.3+-purple?style=flat-square)
-![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?style=flat-square)
+![Code License](https://img.shields.io/badge/Code%20License-Apache%202.0-lightgrey?style=flat-square)
 
 **Do primeiro qubit a um protocolo de Quantum Machine Learning pré-registrável, auditável e orientado à evidência**
 
+📘 **[Leia a Wiki científica completa e auditável](WIKI_CIENTIFICA.md)**
+
 </div>
+
+---
+
+## 🔎 Estado científico atual — 17/08/2026
+
+- **Projeto OSF:** [kqs2w](https://osf.io/kqs2w/)
+- **Pré-registro:** [9yuvr](https://osf.io/9yuvr/overview)
+- **Situação do registro:** submetido; aprovação do embargo pendente
+- **Execução confirmatória:** ainda não iniciada
+- **Resultados disponíveis:** pilotos anteriores ao registro, preservados sem reclassificação
+- **Parâmetro canônico de referência:** `SEED=42`, `SHOTS=2048`
+- **QPU:** não executada
+- **Conclusão atual:** os pilotos não sustentam vantagem quântica
+
+Consulte a [Wiki científica](WIKI_CIENTIFICA.md) para hipóteses H1–H6, validação aninhada, portões de evidência, perfis de ruído, critérios estatísticos, reprodutibilidade, limitações e governança analítica.
 
 ---
 
@@ -174,7 +191,7 @@ Na célula 0.1, defina:
 NOME_PESQUISADOR = "Seu Nome"
 PROJETO = "Seu Título de Projeto"
 SEED = 42
-SHOTS = 5888
+SHOTS = 2048
 MODO_RAPIDO = False
 EXECUTAR_VALIDACAO_ROBUSTA = True
 EXECUTAR_ESCADA_RUIDO = True
@@ -199,9 +216,9 @@ Execute as células na ordem usando **Ambiente de execução → Executar tudo**
 
 | Etapa | Avaliações Lógicas | Shots Lógicos | Tempo Esperado |
 |---|---:|---:|---|
-| Núcleo didático | 4.064 | 23,928,832 | ~5-10 min |
-| CV aninhada 4×3 | 80.460 | 473,748,480 | ~30-60 min |
-| Escada com ruído | 4.064 | 23,928,832 | ~15-30 min |
+| Núcleo didático | 4.064 | 8.323.072 | ~5-10 min |
+| CV aninhada 4×3 | 80.460 | 164.782.080 | ~30-60 min |
+| Escada com ruído | 4.064 | 8.323.072 | ~15-30 min |
 
 ---
 
@@ -234,7 +251,7 @@ No snapshot observado, os baselines clássicos superaram o kernel quântico no d
 
 Este projeto segue boas práticas de **ciência aberta**:
 
-- ✅ [Registro permanente OSF 9yuvr](https://osf.io/9yuvr/overview), aprovado e embargado até 16 ago. 2027
+- ⏳ [Registro permanente OSF 9yuvr](https://osf.io/9yuvr/overview), submetido em 17 ago. 2026; aprovação do embargo pendente, com término previsto para 16 ago. 2027
 - ✅ [Projeto associado OSF kqs2w](https://osf.io/kqs2w)
 - ✅ Conteúdo confirmatório congelado; revisões posteriores permanecem versionadas
 - ✅ SHA-256 do protocolo documentado
@@ -258,7 +275,8 @@ Pesquisa em Inteligência Artificial, Educação e Computação Quântica
 ## 📜 Licença
 
 - **Protocolo, texto, tabelas e figuras:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- **Código:** [MIT License](https://opensource.org/licenses/MIT)
+- **Código deste repositório:** [Apache License 2.0](LICENSE)
+- **Nota de governança:** o pré-registro menciona MIT para o código original, enquanto o arquivo `LICENSE` vigente é Apache 2.0. A divergência está documentada e deve ser harmonizada antes da versão científica final.
 
 ---
 
@@ -286,8 +304,8 @@ Pesquisa em Inteligência Artificial, Educação e Computação Quântica
 ### P: Posso executar isso em uma máquina local?
 **R:** Sim, mas Google Colab com GPU é recomendado para simulations grandes.
 
-### P: Como pré-registrar este projeto?
-**R:** Copie o conteúdo do manifesto (célula 0.5) para [OSF](https://osf.io/) antes de executar a análise.
+### P: Este projeto já foi pré-registrado?
+**R:** Sim. O registro [OSF 9yuvr](https://osf.io/9yuvr/overview) foi submetido em 17/08/2026 e aguarda aprovação do embargo. A execução confirmatória deve usar esse registro; não crie um novo registro para substituir o protocolo congelado.
 
 ### P: E se eu quiser usar hardware quântico real?
 **R:** O Módulo 8 fornece âncoras prospectivas e portões go/no-go. Use o [IBM Quantum Platform](https://quantum.cloud.ibm.com/) e mantenha a API key exclusivamente no Colab Secrets.
