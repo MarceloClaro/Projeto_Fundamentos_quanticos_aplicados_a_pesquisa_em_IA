@@ -534,3 +534,40 @@ Os resultados-piloto não sustentam vantagem quântica e bloquearam, de maneira 
 | [notebook piloto](resultados/notebook_executado_piloto_2026-08-16.ipynb) | snapshot imutável das saídas anteriores ao registro |
 | [`LICENSE`](LICENSE) | licença vigente no repositório |
 
+---
+
+## 23. Pacote editorial para artigo científico
+
+Em 17/08/2026 foi criada a versão 0.1 de um manuscrito metodológico, reprodutível e orientado a resultados negativos.
+
+### 23.1 Artefatos
+
+| Artefato | Finalidade |
+|---|---|
+| [MANUSCRITO.md](artigo/MANUSCRITO.md) | artigo completo em estrutura IMRaD |
+| [DECLARACAO_REPRODUTIBILIDADE.md](artigo/DECLARACAO_REPRODUTIBILIDADE.md) | ambiente, parâmetros e procedimento |
+| [CHECKLIST_SUBMISSAO.md](artigo/CHECKLIST_SUBMISSAO.md) | itens concluídos e pendentes |
+| [JSON diagnóstico](resultados/resumo_diagnostico_2048shots_2026-08-17.json) | resultados legíveis por máquina |
+| [CITATION.cff](CITATION.cff) | metadados de citação |
+
+### 23.2 Tese científica atual
+
+A validade numérica e a sobrevivência geométrica de um kernel quântico não implicam vantagem preditiva. No diagnóstico de 2.048 shots, o kernel permaneceu simétrico, unitário na diagonal e efetivamente PSD; entretanto, alcançou BAC 0,625 contra 0,875 do SVM-RBF. O alinhamento kernel–alvo foi 0,10975.
+
+### 23.3 Status editorial
+
+A versão atual pode ser divulgada como **preprint metodológico com resultados exploratórios negativos**. Não pode ser apresentada como confirmação de H1–H6 enquanto permanecerem pendentes:
+
+1. aprovação do registro;
+2. execução limpa confirmatória;
+3. CV aninhada 4×3;
+4. análise corrigida para dependência;
+5. validação externa;
+6. replicação independente;
+7. harmonização da licença;
+8. confirmação de afiliação, ORCID, financiamento e conflitos.
+
+### 23.4 Princípio de publicação
+
+Resultados nulos, inconclusivos ou negativos devem ser publicados com a mesma rastreabilidade dos resultados positivos. A QPU permanece uma etapa posterior, condicionada ao portão científico e não ao interesse demonstrativo.
+
