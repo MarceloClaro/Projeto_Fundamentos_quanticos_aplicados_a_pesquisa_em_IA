@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "timestamp_utc": "2026-08-17T09:42:18.457771+00:00",
+  "classification": "diagnostico_pos_registro_sem_analise_confirmatoria",
+  "osf_status": "submetido_aprovacao_embargo_pendente",
+  "configuration": {
+    "seed": 42,
+    "shots": 2048,
+    "fast_mode": true,
+    "osf_gate": "aguardando_registro",
+    "osf_url_enabled": false,
+    "qpu_enabled": false
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Linux x86_64",
+    "numpy": "2.0.2",
+    "pandas": "2.2.2",
+    "scikit_learn": "1.6.1",
+    "qiskit": "2.3.1",
+    "qiskit_aer": "0.17.2",
+    "qiskit_machine_learning": "0.9.0",
+    "scikit_image": "0.25.2",
+    "statsmodels": "0.14.6",
+    "medmnist": "3.0.2",
+    "torch": "2.11.0+cpu",
+    "torchvision": "0.26.0+cpu"
+  },
+  "sample": {
+    "train_n": 32,
+    "test_n": 16,
+    "classes": [
+      0,
+      1
+    ]
+  },
+  "models": [
+    {
+      "model": "SVM-RBF",
+      "accuracy": 0.875,
+      "balanced_accuracy": 0.875,
+      "f1": 0.8888888888888888,
+      "kernel_time_s": null
+    },
+    {
+      "model": "Logistic regression",
+      "accuracy": 0.8125,
+      "balanced_accuracy": 0.8125,
+      "f1": 0.8421052631578947,
+      "kernel_time_s": null
+    },
+    {
+      "model": "SVM + quantum kernel",
+      "accuracy": 0.625,
+      "balanced_accuracy": 0.625,
+      "f1": 0.5,
+      "kernel_time_s": 8.601627007000388
+    }
+  ],
+  "kernel": {
+    "train_shape": [
+      32,
+      32
+    ],
+    "test_shape": [
+      16,
+      32
+    ],
+    "symmetry_max": 0,
+    "diagonal_deviation_max": 0,
+    "min_eigenvalue": -7.8108878591334775e-16,
+    "target_alignment": 0.10974854914317834,
+    "effective_rank": 8.926373646800982,
+    "effective_rank_relative": 0.2789491764625307
+  },
+  "evidence_gate": {
+    "reference": "SVM-RBF",
+    "delta_bac_qml_minus_rbf": -0.25,
+    "paired_ci95": [
+      -0.5625,
+      0.0625
+    ],
+    "bootstrap_median": -0.25,
+    "positive_bootstrap_fraction": 0.0424,
+    "bootstrap_resamples": 5000,
+    "verdict": "inconclusive_interval_includes_zero",
+    "evidence_status": "exploratory"
+  },
+  "validity_ladder": [
+    {
+      "level": "statevector",
+      "accuracy": 0.625,
+      "f1": 0.5,
+      "relative_geometric_error": 0,
+      "target_alignment": 0.10887550168885297,
+      "effective_rank": 8.625285739068584,
+      "time_s": 0.11525187200004439
+    },
+    {
+      "level": "2048_shots",
+      "accuracy": 0.625,
+      "f1": 0.5,
+      "relative_geometric_error": 0.012162312001843777,
+      "target_alignment": 0.10974854914317834,
+      "effective_rank": 8.926373646800982,
+      "time_s": 8.601627007000388
+    }
+  ],
+  "cost": {
+    "estimated_fidelity_evaluations": 1008,
+    "estimated_logical_shots": 2064384
+  },
+  "validation": {
+    "integration_checks_total": 36,
+    "integration_checks_passed": 36,
+    "strict_json": true
+  },
+  "limitations": [
+    "single small test split",
+    "no confirmatory multi-seed validation",
+    "no external confirmatory test",
+    "no QPU execution"
+  ]
+}
