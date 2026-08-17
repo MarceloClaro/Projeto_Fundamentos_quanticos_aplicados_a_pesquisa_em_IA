@@ -340,3 +340,30 @@ Para dúvidas ou problemas:
 Made with ❤️ for quantum research and reproducible science
 
 </div>
+
+---
+
+## 📝 Pacote de artigo científico — versão 0.1
+
+O repositório inclui agora um pacote editorial rastreável para submissão como **artigo metodológico com resultados exploratórios negativos**:
+
+- [Manuscrito científico completo](artigo/MANUSCRITO.md)
+- [Declaração de reprodutibilidade](artigo/DECLARACAO_REPRODUTIBILIDADE.md)
+- [Checklist de submissão e pendências confirmatórias](artigo/CHECKLIST_SUBMISSAO.md)
+- [Resumo diagnóstico estruturado — 2.048 shots](resultados/resumo_diagnostico_2048shots_2026-08-17.json)
+- [Metadados de citação](CITATION.cff)
+
+### Resultado diagnóstico mais recente
+
+Na execução de 17/08/2026, com 32 casos de treino, 16 de teste, seed 42 e 2.048 shots:
+
+| Modelo | BAC | F1 |
+|---|---:|---:|
+| SVM-RBF | 0,8750 | 0,8889 |
+| Regressão logística | 0,8125 | 0,8421 |
+| SVM + kernel quântico | 0,6250 | 0,5000 |
+
+A diferença QML–RBF foi −0,25; IC95% pareado [−0,5625; 0,0625]. O resultado é exploratório e inconclusivo, com direção pontual desfavorável ao QML. Statevector e 2.048 shots produziram a mesma acurácia, embora o erro geométrico relativo tenha sido 1,22%.
+
+O manuscrito não declara vantagem quântica. A execução confirmatória permanece bloqueada até aprovação do registro OSF e cumprimento da validação aninhada.
+
