@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Se você utilizar este software ou protocolo, cite o repositório e o manuscrito."
+title: "Sobrevivência Geométrica sem Vantagem Preditiva em Kernels Quânticos: Protocolo Aberto e Evidência Piloto"
+type: software
+authors:
+  - family-names: "Laranjeira"
+    given-names: "Marcelo Claro"
+version: "0.1.0"
+date-released: "2026-08-17"
+repository-code: "https://github.com/MarceloClaro/Projeto_Fundamentos_quanticos_aplicados_a_pesquisa_em_IA"
+url: "https://osf.io/kqs2w/"
+license: "Apache-2.0"
+keywords:
+  - quantum machine learning
+  - quantum kernel
+  - open science
+  - nested validation
+  - negative results
+abstract: >-
+  Protocolo aberto e auditável para comparar kernels quânticos de fidelidade
+  com baselines clássicos, preservando resultados nulos ou negativos e
+  bloqueando alegações de vantagem antes de validação confirmatória.
