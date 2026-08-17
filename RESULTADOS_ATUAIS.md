@@ -111,3 +111,60 @@ O perfil e `C` foram escolhidos na validação e o teste foi aberto uma vez. O r
 
 Os resultados preservados **não sustentam vantagem quântica**. Eles mostram que a geometria do kernel pode sobreviver parcialmente a shots e ruído sem produzir ganho preditivo, um achado metodologicamente relevante para evitar selecionar configurações apenas por fidelidade geométrica. A próxima evidência válida deve vir de execução pós-registro, ambiente limpo, CV aninhada repetida, correção da dependência entre folds e replicação independente. Somente depois devem ser considerados pares-âncora em QPU.
 
+---
+
+## 8. Snapshot diagnóstico de 2.048 shots — 17/08/2026
+
+> **Classificação:** execução diagnóstica posterior à submissão do registro, realizada antes da aprovação do embargo. Não constitui análise confirmatória.
+
+### 8.1 Ambiente
+
+Python 3.12.13; Qiskit 2.3.1; Qiskit Aer 0.17.2; Qiskit Machine Learning 0.9.0; scikit-learn 1.6.1; seed 42; 2.048 shots.
+
+### 8.2 Amostra e modelos
+
+- treino: 32;
+- teste: 16;
+- duas classes balanceadas;
+- QPU desativada;
+- módulos confirmatórios e extensos desativados.
+
+| Modelo | Acurácia | BAC | F1 | Tempo do kernel |
+|---|---:|---:|---:|---:|
+| SVM-RBF | 0,8750 | 0,8750 | 0,8889 | — |
+| Regressão logística | 0,8125 | 0,8125 | 0,8421 | — |
+| SVM + kernel quântico | 0,6250 | 0,6250 | 0,5000 | 8,60 s |
+
+### 8.3 Inferência descritiva
+
+- ΔBAC QML–RBF: −0,25;
+- IC95% pareado: [−0,5625; 0,0625];
+- mediana bootstrap: −0,25;
+- fração de 5.000 reamostragens com Δ positivo: 0,0424;
+- parecer: inconclusivo porque o intervalo inclui zero;
+- direção pontual: desfavorável ao QML.
+
+### 8.4 Kernel e escada de validade
+
+| Diagnóstico | Valor |
+|---|---:|
+| Assimetria máxima | 0 |
+| Desvio diagonal | 0 |
+| Menor autovalor | −7,81×10⁻¹⁶ |
+| Alinhamento kernel–alvo | 0,10975 |
+| Posto efetivo | 8,926 |
+| Posto efetivo relativo | 0,2789 |
+| Erro geométrico de 2.048 shots | 0,01216 |
+| Avaliações de fidelidade estimadas | 1.008 |
+| Shots lógicos estimados | 2.064.384 |
+
+Statevector e 2.048 shots produziram acurácia 0,625 e F1 0,500. Portanto, a amostragem finita alterou discretamente a matriz, mas não explica a ausência de ganho preditivo.
+
+### 8.5 Auditoria
+
+Os 36 testes de integração foram aprovados. O resumo foi validado como JSON estrito, sem NaN, e está em [resultados/resumo_diagnostico_2048shots_2026-08-17.json](resultados/resumo_diagnostico_2048shots_2026-08-17.json).
+
+### 8.6 Relação com o piloto anterior
+
+O piloto de 5.888 shots permanece preservado e não foi sobrescrito. Os dois snapshots são metodologicamente distintos e não devem ser combinados como réplicas independentes. Ambos apresentam direção desfavorável ao QML, mas somente uma execução confirmatória futura poderá testar formalmente as hipóteses registradas.
+
