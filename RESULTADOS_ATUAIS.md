@@ -1,5 +1,7 @@
 # Resultados atuais — snapshot piloto
 
+📘 Para o protocolo completo, consulte a [Wiki científica e reprodutível](WIKI_CIENTIFICA.md).
+
 > **Classificação de evidência:** resultados exploratórios e de depuração produzidos antes da análise confirmatória registrada. Este documento preserva o estado observado sem convertê-lo em confirmação de hipótese, vantagem quântica ou evidência clínica.
 
 ## Proveniência e integridade
@@ -7,9 +9,10 @@
 - Fonte: notebook executado anteriormente na branch `main`.
 - Blob Git original: `2749d6fe1e1c141fceca7c581ac426ecd53db6d9`.
 - Estado preservado: 101 células, 106 saídas e nenhum erro de execução armazenado.
-- Registro confirmatório: [OSF 9yuvr](https://osf.io/9yuvr/overview), aprovado e sob embargo.
+- Registro confirmatório: [OSF 9yuvr](https://osf.io/9yuvr/overview), submetido em 17/08/2026; aprovação do embargo pendente, com término previsto para 16/08/2027.
 - Snapshot completo: `resultados/notebook_executado_piloto_2026-08-16.ipynb`.
 - Hardware real: **não executado**; não há resultado de QPU neste snapshot.
+- O piloto preservado usou 5.888 shots; a execução confirmatória deve usar 2.048 shots como referência canônica e reportar separadamente a escada pré-especificada.
 
 ## 1. Diagnóstico numérico do kernel
 
