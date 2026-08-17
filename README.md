@@ -1,0 +1,2 @@
+# Projeto_Fundamentos_quanticos_aplicados_a_pesquisa_em_IA
+Projeto_Fundamentos_quânticos_aplicados_à_pesquisa_em_IA
