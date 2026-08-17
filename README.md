@@ -219,6 +219,17 @@ Execute as células na ordem usando **Ambiente de execução → Executar tudo**
 
 ---
 
+## 📊 Resultados atuais
+
+O notebook principal é mantido limpo para reprodução. Os resultados já executados foram preservados separadamente e classificados como **piloto anterior ao pré-registro**:
+
+- [Resumo científico dos resultados atuais](RESULTADOS_ATUAIS.md)
+- [Notebook piloto executado com todas as saídas](resultados/notebook_executado_piloto_2026-08-16.ipynb)
+
+No snapshot observado, os baselines clássicos superaram o kernel quântico no desfecho principal. Não houve execução em QPU e não há alegação de vantagem quântica.
+
+---
+
 ## 🔗 Pré-Registro e Reprodutibilidade
 
 Este projeto segue boas práticas de **ciência aberta**:
