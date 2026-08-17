@@ -180,7 +180,16 @@ EXECUTAR_VALIDACAO_ROBUSTA = True
 EXECUTAR_ESCADA_RUIDO = True
 ```
 
-### 4. Executar Células
+### 4. Configurar IBM Quantum com segurança (opcional)
+
+1. Crie a API key no [IBM Quantum Platform](https://quantum.cloud.ibm.com/).
+2. No Colab, abra **🔑 Secrets** e crie `IBM_QUANTUM_API_KEY`.
+3. Opcionalmente, crie `IBM_QUANTUM_INSTANCE_CRN`.
+4. Execute a célula 8.2 com `CONFIGURAR_ACESSO_IBM = True`.
+
+A autenticação ocorre somente em memória. A chave não é gravada no notebook, no repositório ou nas saídas, e a validação inicial não envia circuitos nem consome shots.
+
+### 5. Executar Células
 
 Execute as células na ordem usando **Ambiente de execução → Executar tudo** após ler os avisos.
 
@@ -205,6 +214,7 @@ Execute as células na ordem usando **Ambiente de execução → Executar tudo**
 - ✅ Análise de incerteza pareada
 - ✅ Portões de evidência geométrica
 - ✅ Protocolo para exportação OSF
+- ✅ Gerador reproduzível `build_quantum_notebook.py`
 - ✅ Figuras e tabelas para paper
 
 ---
@@ -213,7 +223,9 @@ Execute as células na ordem usando **Ambiente de execução → Executar tudo**
 
 Este projeto segue boas práticas de **ciência aberta**:
 
-- ✅ Protocolo pré-registrado localmente (congelado antes da análise)
+- ✅ [Registro permanente OSF 9yuvr](https://osf.io/9yuvr/overview), aprovado e embargado até 16 ago. 2027
+- ✅ [Projeto associado OSF kqs2w](https://osf.io/kqs2w)
+- ✅ Conteúdo confirmatório congelado; revisões posteriores permanecem versionadas
 - ✅ SHA-256 do protocolo documentado
 - ✅ Seeds e versões fixadas
 - ✅ Validação cruzada aninhada para seleção de hiperparâmetros
@@ -267,7 +279,7 @@ Pesquisa em Inteligência Artificial, Educação e Computação Quântica
 **R:** Copie o conteúdo do manifesto (célula 0.5) para [OSF](https://osf.io/) antes de executar a análise.
 
 ### P: E se eu quiser usar hardware quântico real?
-**R:** O Módulo 8 fornece âncoras prospectivas. Consulte [Qiskit IBM Runtime](https://quantum.ibm.com/).
+**R:** O Módulo 8 fornece âncoras prospectivas e portões go/no-go. Use o [IBM Quantum Platform](https://quantum.cloud.ibm.com/) e mantenha a API key exclusivamente no Colab Secrets.
 
 ---
 
