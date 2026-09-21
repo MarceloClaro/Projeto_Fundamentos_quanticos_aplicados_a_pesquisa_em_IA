@@ -2,7 +2,7 @@
 
 ## Título
 
-**Portões de Evidência para Kernels Quânticos Reprodutíveis sob Ruído e Custo**
+**Portões de Evidência para Kernels Quânticos Reprodutíveis sob Ruído, Custo e Validação Aninhada**
 
 ## Grupo de Trabalho proposto
 
@@ -25,7 +25,9 @@ Marcelo Claro Laranjeira.
 
 ## Resumo
 
-Este projeto propõe validar, de forma prospectiva, auditável e reprodutível, um protocolo de avaliação de kernels quânticos de fidelidade aplicados à aprendizagem de máquina supervisionada sob amostragem finita, ruído e restrições explícitas de custo computacional. A investigação parte de uma infraestrutura científica já implementada e pré-registrada, com código aberto, documentação de governança analítica, separação entre resultados exploratórios e confirmação, controle de vazamento de informação, validação cruzada aninhada e critérios de progressão por portões de evidência. O objetivo central não é presumir vantagem quântica, mas determinar em quais condições a geometria do kernel permanece informativa e se essa preservação se traduz, ou não, em utilidade preditiva comparável a baselines clássicos fortes. A comparação primária utilizará SVM com kernel quântico de fidelidade e SVM-RBF, com análise complementar de regressão logística, SVM linear, Random Forest e HistGradientBoosting. Serão avaliados acurácia balanceada, contraste pareado de desempenho, alinhamento kernel–alvo, posto efetivo, erro geométrico, sobrevivência geométrica, estabilidade espectral, tempo de execução e custo em avaliações de circuitos e shots. O desenho prevê validação externa repetida, seleção interna independente, análise de sensibilidade, controle de múltiplas comparações e transferência condicional para hardware quântico apenas quando critérios geométricos, preditivos e de custo forem satisfeitos. O produto esperado é um benchmark aberto e auditável para distinguir estabilidade geométrica de utilidade preditiva em Quantum Machine Learning, incluindo resultados positivos, nulos ou negativos.
+Este projeto propõe validar, de forma prospectiva, auditável e reprodutível, um protocolo de avaliação de kernels quânticos de fidelidade aplicados à aprendizagem de máquina supervisionada sob amostragem finita, ruído e restrições explícitas de custo computacional. A investigação parte de uma infraestrutura científica já implementada, com código aberto, protocolo submetido ao Open Science Framework (OSF), documentação de governança analítica, separação entre resultados exploratórios e confirmação, prevenção de vazamento de informação, validação cruzada aninhada e critérios de progressão por portões de evidência. O objetivo central não é presumir vantagem quântica, mas determinar em quais condições a geometria do kernel permanece informativa e se essa preservação se traduz, ou não, em utilidade preditiva comparável a baselines clássicos fortes. A comparação primária utilizará SVM com kernel quântico de fidelidade e SVM-RBF, com análise complementar de regressão logística, SVM linear, Random Forest e HistGradientBoosting. Serão avaliados acurácia balanceada, contraste pareado de desempenho, alinhamento kernel–alvo, posto efetivo, erro geométrico, sobrevivência geométrica, estabilidade espectral, tempo de execução e custo em avaliações de circuitos e shots. O desenho prevê validação externa repetida, seleção interna independente, análise de sensibilidade, controle de múltiplas comparações e transferência condicional para hardware quântico apenas quando critérios geométricos, preditivos e de custo forem satisfeitos. O produto esperado é um benchmark aberto e auditável para distinguir estabilidade geométrica de utilidade preditiva em Quantum Machine Learning, incluindo resultados positivos, nulos, equivalentes, inconclusivos ou negativos.
+
+**Palavras-chave:** aprendizagem de máquina quântica; kernels quânticos; validação aninhada; reprodutibilidade; computação quântica.
 
 ---
 
@@ -39,7 +41,7 @@ Além disso, resultados obtidos em simulação ideal podem sofrer alterações q
 
 O presente projeto adota uma perspectiva baseada em ciência aberta e em governança de evidências. Em vez de buscar uma demonstração favorável de “vantagem quântica”, o protocolo determina previamente em quais condições uma configuração pode avançar da simulação ideal para shots, ruído e, eventualmente, hardware real. Essa estratégia reduz o risco de seleção pós-hoc de modelos, hiperparâmetros ou regimes de execução.
 
-O repositório que fundamenta esta proposta contém protocolo versionado, projeto OSF, pré-registro, notebook reproduzível, gerador programático, dados estruturados de diagnóstico, testes automatizados e manuscrito metodológico. A execução confirmatória permanece separada dos resultados exploratórios, o que permite que a proposta do Congresso seja desenvolvida sobre uma base científica já auditável sem reclassificar pilotos como confirmação.
+O repositório que fundamenta esta proposta contém protocolo versionado, projeto OSF, pré-registro submetido em 17/08/2026, notebook reproduzível, gerador programático, dados estruturados de diagnóstico, testes automatizados e manuscrito metodológico. Como o estado operacional atual do registro não pôde ser verificado por acesso público durante esta preparação, a execução confirmatória somente será iniciada após conferência direta do registro e validação dos hashes dos artefatos congelados. Os resultados exploratórios permanecerão separados da análise confirmatória.
 
 ---
 
@@ -370,7 +372,7 @@ LIU, Y.; ARUNACHALAM, S.; TEMME, K. A rigorous and robust quantum speed-up in su
 
 NADEAU, C.; BENGIO, Y. Inference for the generalization error. **Machine Learning**, Dordrecht, v. 52, n. 3, p. 239–281, 2003. DOI: https://doi.org/10.1023/A:1024068626366.
 
-QISKIT CONTRIBUTORS. Qiskit: an open-source framework for quantum computing. **Zenodo**, 2019. DOI: https://doi.org/10.5281/zenodo.2562111.
+ALEKSANDROWICZ, G. et al. Qiskit: an open-source framework for quantum computing. **Zenodo**, 2019. DOI: https://doi.org/10.5281/zenodo.2562111.
 
 SCHULD, M.; KILLORAN, N. Quantum machine learning in feature Hilbert spaces. **Physical Review Letters**, College Park, v. 122, art. 040504, 2019. DOI: https://doi.org/10.1103/PhysRevLett.122.040504.
 
@@ -380,7 +382,7 @@ VARMA, S.; SIMON, R. Bias in error estimation when using cross-validation for mo
 
 YANG, J. et al. MedMNIST v2: a large-scale lightweight benchmark for 2D and 3D biomedical image classification. **Scientific Data**, London, v. 10, art. 41, 2023. DOI: https://doi.org/10.1038/s41597-022-01721-8.
 
-YIN, Z. et al. Experimental quantum-enhanced kernel-based machine learning. **Nature Photonics**, London, 2025. DOI: https://doi.org/10.1038/s41566-025-01682-5.
+YIN, Z. et al. Experimental quantum-enhanced kernel-based machine learning on a photonic processor. **Nature Photonics**, v. 19, p. 1020–1027, 2025. DOI: https://doi.org/10.1038/s41566-025-01682-5.
 
 ---
 
@@ -391,5 +393,5 @@ YIN, Z. et al. Experimental quantum-enhanced kernel-based machine learning. **Na
 3. Inserir afiliações e dados completos da equipe.
 4. Verificar o estado atual do pré-registro OSF antes de descrever a fase confirmatória como liberada.
 5. Harmonizar a divergência de licença MIT/Apache já documentada no projeto.
-6. Converter esta versão para o formato final de submissão, mantendo o limite máximo de 15 páginas.
-7. Realizar auditoria final de referências, DOI, ortografia e paginação.
+6. **Concluído:** versão editorial em DOCX/PDF produzida com 13 páginas, dentro do limite máximo de 15 páginas.
+7. **Concluído:** auditoria de referências e DOI realizada em 21/09/2026; ver `AUDITORIA_REFERENCIAS_PUCSP_2026.md`.
