@@ -3,7 +3,7 @@
 ## Requisitos do edital
 
 - [x] Projeto estruturado para o GT 1 — Tecnologias de IA.
-- [x] Título definido em versão de trabalho.
+- [x] Título final definido.
 - [x] Resumo.
 - [x] Introdução.
 - [x] Justificativa/Motivação.
@@ -12,10 +12,11 @@
 - [x] Cronograma.
 - [x] Resultados esperados/Impactos.
 - [x] Referências.
+- [x] Referências e DOI auditados em 21/09/2026.
 - [ ] Dados completos da equipe.
 - [ ] Coordenador com vínculo formal PUC-SP, PUC-Campinas ou PUC-Rio confirmado.
 - [ ] Maioria da equipe vinculada à PUC-SP, PUC-Campinas ou PUC-Rio confirmada.
-- [ ] Revisão de extensão final: máximo de 15 páginas.
+- [x] Revisão de extensão final: **13 páginas**, dentro do máximo de 15.
 - [ ] Submissão na Plataforma Even até 25/09/2026.
 
 ## Critérios de julgamento — estratégia de aderência
@@ -52,3 +53,11 @@
 - [ ] Estado do OSF revisado imediatamente antes da submissão.
 - [ ] Licença MIT/Apache harmonizada.
 - [ ] DOI de versão de software, se disponível, inserido.
+
+
+## Artefatos editoriais
+
+- [x] DOCX pré-submissão gerado e revisado visualmente.
+- [x] PDF pré-submissão gerado com 13 páginas e verificado por renderização.
+- [x] Cronograma formatado em página paisagem para legibilidade.
+- [ ] Preencher coordenador PUC e composição final da equipe antes do envio.
